@@ -1,0 +1,74 @@
+/* Elimina los márgenes y ajusta el cuerpo */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Contenedor del GIF de fondo */
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; /* Envía el fondo detrás del contenido */
+}
+
+/* GIF como fondo */
+.background img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Redimensiona el GIF para cubrir todo el contenedor */
+}
+
+/* Contenedor del contenido */
+.countdown {
+    text-align: center;
+    color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    width: 90%; /* Asegura que se ajuste en pantallas pequeñas */
+    max-width: 300px;
+    background: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+}
+
+.countdown h1 {
+    font-size: 1.5rem;
+    margin: 0 0 10px;
+}
+
+.time {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Ajustes responsive */
+@media (max-width: 768px) {
+    .countdown h1 {
+        font-size: 1.2rem;
+    }
+
+    .time {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .countdown h1 {
+        font-size: 1rem;
+    }
+
+    .time {
+        font-size: 1.2rem;
+    }
+}
